@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nourish Beauty Cosmetic</title>
+
+<!-- CSS INSIDE HTML -->
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff0f5;
+    color: #333;
+}
+
+header {
+    background-color: #d63384;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+.home {
+    background-color: #f8c8dc;
+    padding: 60px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service img {
+    width: 220px;
+    height: 160px;
+    border-radius: 10px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 250px;
+}
+
+.product img {
+    width: 100%;
+    height: 170px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #d63384;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #a61e65;
+}
+
+footer {
+    background-color: #d63384;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Nourish Beauty Cosmetic</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="home">
+    <h2>Welcome to Our Cosmetics</h2>
+    <p><strong>Where your beauty is our mission to maintain.</strong></p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        Nourish Beauty Cosmetic is dedicated to enhancing natural beauty through high-quality and affordable cosmetic products. 
+        We believe beauty builds confidence, and our mission is to provide safe, trendy, and reliable products for every skin type. 
+        Our team carefully selects ingredients to ensure quality and customer satisfaction. 
+        At Nourish Beauty Cosmetic, we are committed to helping our customers look beautiful, feel confident, and express themselves through beauty.
+    </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-container">
+        <div class="service">
+            <img src="7.JFIF" alt="Service 1">
+            <p>Professional Makeup</p>
+        </div>
+
+        <div class="service">
+            <img src="8.JFIF" alt="Service 2">
+            <p>Skin Care Treatment</p>
+        </div>
+
+        <div class="service">
+            <img src="6.JFIF" alt="Service 3">
+            <p>Beauty Consultation</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+    <h2>Our Products</h2>
+
+    <div class="product-container">
+
+        <div class="product">
+            <img src="Makeup.JFIF" alt="Makeup">
+            <h3>Makeup</h3>
+            <p>Price: Sh.1500</p>
+            <button onclick="orderProduct('Makeup',1500)">Order Now</button>
+        </div>
+
+        <div class="product">
+            <img src="Summer Lips.JFIF" alt="Summer Lips">
+            <h3>Summer Lips</h3>
+            <p>Price: Sh.1000</p>
+            <button onclick="orderProduct('Summer Lips',1000)">Order Now</button>
+        </div>
+
+        <div class="product">
+            <img src="3.JFIF" alt="Beauty Cream">
+            <h3>Beauty Cream</h3>
+            <p>Price: Sh.560</p>
+            <button onclick="orderProduct('Beauty Cream',560)">Order Now</button>
+        </div>
+
+        <div class="product">
+            <img src="4.JFIF" alt="Face Powder">
+            <h3>Face Powder</h3>
+            <p>Price: Sh.950</p>
+            <button onclick="orderProduct('Face Powder',950)">Order Now</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> 0795453554</p>
+    <p><strong>Email:</strong> @nourishbeautycosmetic.com</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Nourish Beauty Cosmetic. All Rights Reserved.</p>
+</footer>
+
+<!-- JAVASCRIPT INSIDE HTML -->
+<script>
+
+function orderProduct(productName, price) {
+    let confirmOrder = confirm("Do you want to order " + productName + " for Sh." + price + "?");
+
+    if (confirmOrder) {
+        alert("You have ordered " + productName + ". Please proceed to payment of Sh." + price + ".");
+        
+        // Simulated payment page
+        window.location.href = "https://www.paypal.com";
+    } else {
+        alert("Order Cancelled.");
+    }
+}
+
+</script>
+
+</body>
+</html>
